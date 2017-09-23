@@ -2,5 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig" />
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="${redis.hostName}" />
+        <constructor-arg index="2" value="${redis.port}" />
+        <constructor-arg index="3" value="${redis.timeout}" />
+    </bean>
 </beans>

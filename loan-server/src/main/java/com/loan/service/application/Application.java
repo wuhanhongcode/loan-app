@@ -12,5 +12,6 @@ public class Application {
                 new String[] {"classpath:/spring/spring-context.xml"});
         context.start();
         System.in.read();
+        System.out.println("系统启动成功..........");
     }
 }

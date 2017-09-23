@@ -3,11 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-
-    <dubbo:application name="loan-service"/>
+    <dubbo:application name="loan-manage-consumer"/>
     <dubbo:registry address="zookeeper://192.168.56.110:5181"/>
-    <dubbo:protocol name="dubbo" port="20880"/>
 
-    <dubbo:service interface="com.loan.api.user.UserService" ref="userService"/>
-    <bean id="userService" class="com.loan.service.busi.user.UserServiceImpl"/>
+    <dubbo:reference id="userService" interface="com.loan.api.user.UserService"/>
 </beans>
