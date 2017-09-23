@@ -1,6 +1,7 @@
 package com.loan.api.user;
 
 import com.loan.common.Result;
+import com.loan.entity.UserInfo;
 
 /**
  *
@@ -22,4 +23,11 @@ public interface UserService {
      * @return
      */
     Result sendVerifyCode(String phone);
+
+    /**
+     * 上传用户信息
+     * @param userInfo
+     * @return
+     */
+    Result uploadPersonInfo(UserInfo userInfo);
 }

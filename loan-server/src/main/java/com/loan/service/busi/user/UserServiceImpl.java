@@ -3,6 +3,7 @@ package com.loan.service.busi.user;
 import com.loan.api.user.UserService;
 import com.loan.common.Result;
 import com.loan.entity.User;
+import com.loan.entity.UserInfo;
 import com.loan.service.mapper.UserMapper;
 import com.loan.tools.SmsTools;
 import org.apache.commons.lang.StringUtils;
@@ -56,5 +57,9 @@ public class UserServiceImpl implements UserService {
             result = new Result(Result.FAIL,"验证码发送失败");
         }
         return result;
+    }
+
+    public Result uploadPersonInfo(UserInfo userInfo) {
+        return null;
     }
 }
