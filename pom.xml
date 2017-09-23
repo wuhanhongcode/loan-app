@@ -5,6 +5,15 @@
     <artifactId>loan-app</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>loan-common</module>
+        <module>loan-server</module>
+        <module>loan-schedule</module>
+        <module>loan-manage-app</module>
+        <module>loan-manage</module>
+        <module>loan-payment</module>
+        <module>loan-risk</module>
+    </modules>
     <name>loan-app</name>
     <url>http://maven.apache.org</url>
     <dependencies>
