@@ -16,7 +16,7 @@
     </modules>
     <name>loan-app</name>
     <url>http://maven.apache.org</url>
-    <dependencies>
-        
-    </dependencies>
+    <properties>
+        <spring.version>4.3.10.RELEASE</spring.version>
+    </properties>
 </project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- 引入属性文件 <这里是PropertiesFactoryBean类，它也有个locations属性，也是接收一个数组，跟上面一样-->
+    <context:property-placeholder location="classpath:jdbc.properties,redis.properties"/>
+    <!--<bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
+        <!--<property name="locations">-->
+            <!--<array>-->
+                <!--<value>classpath:jdbc.properties</value>-->
+                <!--<value>classpath:redis.properties</value>-->
+            <!--</array>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--配置基于注解-->
+    <context:annotation-config/>
+    <!--自动扫描-->
+    <context:component-scan base-package="com.loan.service"/>
+    <import resource="spring-mybatis.xml"/>
+</beans>
